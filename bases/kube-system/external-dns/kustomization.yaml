@@ -1,0 +1,4 @@
+---
+bases:
+  - ext-dns-helm-repo.yaml
+  - release-ext-dns.yaml
