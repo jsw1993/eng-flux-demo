@@ -1,0 +1,4 @@
+---
+bases:
+  - eks-helm-repo.yaml
+  - release-aws-lb-controller.yaml

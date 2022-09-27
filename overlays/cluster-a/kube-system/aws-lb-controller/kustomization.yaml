@@ -1,0 +1,6 @@
+---
+resources:
+  - ../../../../bases/kube-system/aws-lb-controller
+patchesStrategicMerge:
+  - release-aws-lb-controller.yaml
+
