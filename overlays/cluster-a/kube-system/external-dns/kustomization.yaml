@@ -1,0 +1,6 @@
+---
+resources:
+  - ../../../../bases/kube-system/external-dns
+patchesStrategicMerge:
+  - release-ext-dns.yaml
+
