@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   type: msteams
-  address: https://saveit.webhook.office.com/webhookb2/971456e3-e9bd-4376-b2fd-4e823448f0db@16098a1a-c0e4-4cf9-8888-ecdb7ecc1216/IncomingWebhook/a906468ff3f14e0a8eaa45083865c779/153f8e8f-3566-46f3-9dbf-5b97a8502721
+  address: https://saveit.webhook.office.com/webhookb2/971456e3-e9bd-4376-b2fd-4e823448f0db@16098a1a-c0e4-4cf9-8888-ecdb7ecc1216/IncomingWebhook/a6181c35ea3942ffbf39df14a3c3e574/153f8e8f-3566-46f3-9dbf-5b97a8502721
 ---
 apiVersion: notification.toolkit.fluxcd.io/v1beta1
 kind: Alert
