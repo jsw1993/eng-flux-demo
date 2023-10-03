@@ -16,7 +16,7 @@ spec:
       newName: ghcr.io/jsw1993/eng-flux-ci-demo
       newTag: 2022-09-28-145300 # {"$imagepolicy": "flux-system:eng-flux-ci-demo:tag"}
 ---
-apiVersion: image.toolkit.fluxcd.io/v1
+apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImageRepository
 metadata:
   name: eng-flux-ci-demo
