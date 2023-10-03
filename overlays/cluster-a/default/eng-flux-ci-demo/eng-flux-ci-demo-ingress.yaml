@@ -5,7 +5,7 @@ metadata:
   namespace: default
   annotations:
     kubernetes.io/ingress.class: alb
-    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:656627883778:certificate/f229f0da-1fb9-4f19-a8dd-ba048847fd83
+    service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:656627883778:certificate/63226935-ae00-43c3-be20-b4c2e34474dd
     alb.ingress.kubernetes.io/scheme: internet-facing
     alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80},{"HTTPS":443}]'
     external-dns.alpha.kubernetes.io/hostname: eng.save-it.co.uk
