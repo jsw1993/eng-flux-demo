@@ -10,6 +10,6 @@ spec:
       version: "1.11.0"
   values:
     registry: txt
-    txtOwnerId: "Z0577344CICK32N1INY5"
+    txtOwnerId: "Z00114353FRO5DCSYJTJ7"
     txtPrefix: "eng-ext-dns"
     domainFilters: ["eng.save-it.co.uk"]
