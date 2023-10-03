@@ -1,4 +1,4 @@
 ---
 namespace: monitoring
 resources:
-  - https://github.com/fluxcd/flux2-monitoring-example//blob/main/monitoring/configs/podmonitor.yaml
+  - flux.yaml
