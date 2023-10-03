@@ -16,6 +16,7 @@ spec:
         enabled: true
       ingress:
         enabled: true
+        ingressClassName: alb
         annotations:
           alb.ingress.kubernetes.io/group.name: eng-restricted
           alb.ingress.kubernetes.io/inbound-cidrs: 88.97.45.21/32
@@ -37,7 +38,7 @@ spec:
     prometheus:
       ingress:
         enabled: true
-        ingressClassName: prometheus.eng.save-it.co.uk
+        ingressClassName: alb
         hosts:
           - prometheus.eng.save-it.co.uk
         annotations:
@@ -56,3 +57,5 @@ spec:
           any: true
         securityContext:
           runAsNonRoot: false
+        service:
+          type: nodePort
