@@ -32,6 +32,8 @@ spec:
         enabled: true
         server:
           root_url: grafana.eng.save-it.co.uk
+      service:
+        type: nodePort
     prometheus:
       ingress:
         enabled: true
