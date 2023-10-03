@@ -2,6 +2,5 @@
 namespace: monitoring
 resources:
   - ../../../bases/monitoring
-  - https://github.com/fluxcd/flux2//manifests/monitoring/monitoring-config?ref=v2.0.1
 patchesStrategicMerge:
   - kube-prom-release.yaml
