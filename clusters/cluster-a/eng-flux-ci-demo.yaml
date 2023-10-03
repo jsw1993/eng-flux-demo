@@ -1,4 +1,4 @@
-apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+apiVersion: kustomize.toolkit.fluxcd.io/v1
 kind: Kustomization
 metadata:
   name: eng-flux-ci-demo
@@ -11,13 +11,12 @@ spec:
     kind: GitRepository
     name: flux-system
     namespace: flux-system
-  validation: client
   images:
     - name: ghcr.io/jsw1993/eng-flux-ci-demo
       newName: ghcr.io/jsw1993/eng-flux-ci-demo
       newTag: 2022-09-28-145300 # {"$imagepolicy": "flux-system:eng-flux-ci-demo:tag"}
 ---
-apiVersion: image.toolkit.fluxcd.io/v1beta1
+apiVersion: image.toolkit.fluxcd.io/v1
 kind: ImageRepository
 metadata:
   name: eng-flux-ci-demo
@@ -26,7 +25,7 @@ spec:
   image: ghcr.io/jsw1993/eng-flux-ci-demo
   interval: 1m0s
 ---
-apiVersion: image.toolkit.fluxcd.io/v1alpha1
+apiVersion: image.toolkit.fluxcd.io/v1beta1
 kind: ImagePolicy
 metadata:
   name: eng-flux-ci-demo
