@@ -12,4 +12,4 @@ spec:
     registry: txt
     txtOwnerId: "Z00114353FRO5DCSYJTJ7"
     txtPrefix: "eng-ext-dns"
-    domainFilters: ["eng.save-it.co.uk"]
+    domainFilters: ["save-it.co.uk"]
