@@ -1,0 +1,5 @@
+---
+resources:
+  - namespace.yaml
+  - kube-prom-helm-repo.yaml
+  - kube-prom-release.yaml

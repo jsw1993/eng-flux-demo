@@ -1,0 +1,56 @@
+---
+apiVersion: helm.toolkit.fluxcd.io/v2beta1
+kind: HelmRelease
+metadata:
+  name: prometheus-stack
+  namespace: monitoring
+spec:
+  chart:
+    spec:
+      version: "49.2.0"
+  values:
+    defaultRules:
+      create: false
+    grafana:
+      initChownData:
+        enabled: true
+      ingress:
+        enabled: true
+        annotations:
+          alb.ingress.kubernetes.io/group.name: eng-restricted
+          alb.ingress.kubernetes.io/inbound-cidrs: 88.97.45.21/32
+          kubernetes.io/ingress.class: alb
+          service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:656627883778:certificate/63226935-ae00-43c3-be20-b4c2e34474dd
+          alb.ingress.kubernetes.io/scheme: internet-facing
+          alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80},{"HTTPS":443}]'
+          external-dns.alpha.kubernetes.io/hostname: grafana.eng.save-it.co.uk
+          alb.ingress.kubernetes.io/ssl-redirect: '443'
+        hosts:
+          - grafana.eng.save-it.co.uk
+      persistence:
+        type: pvc
+        enabled: true
+        server:
+          root_url: grafana.eng.save-it.co.uk
+    prometheus:
+      ingress:
+        enabled: true
+        ingressClassName: prometheus.eng.save-it.co.uk
+        hosts:
+          - prometheus.eng.save-it.co.uk
+        annotations:
+          alb.ingress.kubernetes.io/group.name: eng-restricted
+          alb.ingress.kubernetes.io/inbound-cidrs: 88.97.45.21/32
+          kubernetes.io/ingress.class: alb
+          service.beta.kubernetes.io/aws-load-balancer-ssl-cert: arn:aws:acm:eu-west-1:656627883778:certificate/63226935-ae00-43c3-be20-b4c2e34474dd
+          alb.ingress.kubernetes.io/scheme: internet-facing
+          alb.ingress.kubernetes.io/listen-ports: '[{"HTTP": 80},{"HTTPS":443}]'
+          external-dns.alpha.kubernetes.io/hostname: prometheus.eng.save-it.co.uk
+          alb.ingress.kubernetes.io/ssl-redirect: '443'
+      prometheusSpec:
+        serviceMonitorSelectorNilUsesHelmValues: false
+        podMonitorSelectorNilUsesHelmValues: false
+        NamespaceSelector:
+          any: true
+        securityContext:
+          runAsNonRoot: false
