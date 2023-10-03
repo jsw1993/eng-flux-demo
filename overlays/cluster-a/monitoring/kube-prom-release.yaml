@@ -36,6 +36,8 @@ spec:
       service:
         type: NodePort
     prometheus:
+      service:
+        type: NodePort
       ingress:
         enabled: true
         ingressClassName: alb
@@ -57,5 +59,3 @@ spec:
           any: true
         securityContext:
           runAsNonRoot: false
-        service:
-          type: NodePort
