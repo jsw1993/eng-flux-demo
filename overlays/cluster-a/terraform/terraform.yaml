@@ -5,6 +5,15 @@ metadata:
   namespace: flux-system
 spec:
   approvePlan: auto
+  backendConfig:
+    customConfiguration: |
+      backend "s3" {
+        encrypt = true    
+        bucket = "eng2023-tf-state"
+        dynamodb_table = "terraform-state-lock-dynamo"
+        key    = "terraform.tfstate"
+        region = "eu-west-1"
+      }
   path: ./
   interval: 1m
   sourceRef:
