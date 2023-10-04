@@ -45,6 +45,7 @@ spec:
         memory: 64Mi
     caCertValidityDuration: 24h
     certRotationCheckFrequency: 30m
+    allowBreakTheGlass: true
     image:
       tag: v0.16.0-rc.3
     runner:
