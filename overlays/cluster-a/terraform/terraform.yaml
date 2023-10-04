@@ -16,7 +16,7 @@ spec:
         region = "eu-west-1"
       }
   path: ./
-  interval: 1m
+  interval: 5m
   sourceRef:
     kind: GitRepository
     name: branch-planner-demo
