@@ -1,0 +1,16 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
+metadata:
+  name: terraform
+  namespace: kube-system
+spec:
+  interval: 60m0s
+  path: ../../overlays/cluster-a/terraform
+  prune: true
+  dependsOn:
+    - name: terraform-controller
+  sourceRef:
+    kind: GitRepository
+    name: flux-system
+    namespace: flux-system
