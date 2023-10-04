@@ -4,7 +4,7 @@ metadata:
   name: branch-planner-demo
   namespace: flux-system
 spec:
-  #approvePlan: auto
+  approvePlan: auto
   destroyResourcesOnDeletion: true
   backendConfig:
     customConfiguration: |
