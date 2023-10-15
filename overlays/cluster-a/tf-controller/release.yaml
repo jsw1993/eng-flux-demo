@@ -14,6 +14,9 @@ spec:
   releaseName: tf-controller
   targetNamespace: flux-system
   values:
+    serviceAccount:
+      annotations:
+          eks.amazonaws.com/role-arn: arn:aws:iam::656627883778:policy/tf-controller
     runner:
       serviceAccount:
         annotations:
