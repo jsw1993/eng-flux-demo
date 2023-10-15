@@ -3,3 +3,5 @@ namespace: flux-system
 resources:
   - repo.yaml
   - terraform.yaml
+patchesStrategicMerge:
+  - release.yaml
