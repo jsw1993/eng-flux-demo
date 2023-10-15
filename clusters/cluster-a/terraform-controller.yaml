@@ -6,7 +6,7 @@ metadata:
   namespace: kube-system
 spec:
   interval: 60m0s
-  path: ../../overlays/cluser-a/tf-controller
+  path: ../../overlays/cluster-a/tf-controller
   prune: true
   sourceRef:
     kind: GitRepository
