@@ -1,0 +1,4 @@
+resources:
+  - ../../../bases/terraform-controller
+patchesStrategicMerge:
+  - release.yaml

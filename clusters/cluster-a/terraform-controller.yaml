@@ -6,7 +6,7 @@ metadata:
   namespace: kube-system
 spec:
   interval: 60m0s
-  path: ../../bases/terraform-controller
+  path: ../../overlays/cluser-a/terraform-controller
   prune: true
   sourceRef:
     kind: GitRepository
