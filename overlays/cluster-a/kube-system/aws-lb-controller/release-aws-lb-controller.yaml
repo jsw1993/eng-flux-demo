@@ -10,7 +10,9 @@ spec:
       version: "1.6.1"
   values:
     serviceAccount:
-      create: false
+      create: true
       name: aws-load-balancer-controller
+      annotations:     
+        eks.amazonaws.com/role-arn: arn:aws:iam::656627883778:role/aws-load-balancer-controller
     clusterName: cluster-a
     replicaCount: 1
