@@ -10,6 +10,7 @@ spec:
       version: "1.6.1"
   values:
     serviceAccount:
-      create: true
+      create: false
+      name: aws-load-balancer-controller
     clusterName: cluster-a
     replicaCount: 1
