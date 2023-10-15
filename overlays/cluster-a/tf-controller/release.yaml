@@ -16,8 +16,8 @@ spec:
   values:
     serviceAccount:
       annotations:
-          eks.amazonaws.com/role-arn: arn:aws:iam::656627883778:policy/tf-controller
+          eks.amazonaws.com/role-arn: arn:aws:iam::656627883778:role/tf-controller
     runner:
       serviceAccount:
         annotations:
-          eks.amazonaws.com/role-arn: arn:aws:iam::656627883778:policy/tf-controller
+          eks.amazonaws.com/role-arn: arn:aws:iam::656627883778:role/tf-controller
