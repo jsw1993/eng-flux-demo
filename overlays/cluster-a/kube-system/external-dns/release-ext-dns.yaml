@@ -13,3 +13,6 @@ spec:
     txtOwnerId: "Z00114353FRO5DCSYJTJ7"
     txtPrefix: "eng-ext-dns"
     domainFilters: ["save-it.co.uk"]
+    serviceAccount:
+      annotations: 
+        eks.amazonaws.com/role-arn: arn:aws:iam::656627883778:role/external-dns
